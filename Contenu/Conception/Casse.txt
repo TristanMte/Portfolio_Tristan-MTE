@@ -1,0 +1,94 @@
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
+
+
+#------------------------------------------------------------
+# Table: Modele
+#------------------------------------------------------------
+
+CREATE TABLE Modele(
+        CodeMod  Varchar (50) NOT NULL ,
+        Modele   Varchar (50) NOT NULL ,
+        AnneeMod Year NOT NULL
+	,CONSTRAINT Modele_PK PRIMARY KEY (CodeMod)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Categorie
+#------------------------------------------------------------
+
+CREATE TABLE Categorie(
+        CodeCat     Varchar (50) NOT NULL ,
+        IntituleCat Text NOT NULL
+	,CONSTRAINT Categorie_PK PRIMARY KEY (CodeCat)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Type
+#------------------------------------------------------------
+
+CREATE TABLE Type(
+        CodeType Int  Auto_increment  NOT NULL ,
+        CodeCat  Varchar (50) NOT NULL
+	,CONSTRAINT Type_PK PRIMARY KEY (CodeType)
+
+	,CONSTRAINT Type_Categorie_FK FOREIGN KEY (CodeCat) REFERENCES Categorie(CodeCat)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Piece
+#------------------------------------------------------------
+
+CREATE TABLE Piece(
+        CodePiece Varchar (50) NOT NULL ,
+        Etat      Varchar (50) NOT NULL ,
+        DateRecup Date NOT NULL ,
+        CodeType  Int NOT NULL
+	,CONSTRAINT Piece_PK PRIMARY KEY (CodePiece)
+
+	,CONSTRAINT Piece_Type_FK FOREIGN KEY (CodeType) REFERENCES Type(CodeType)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Marque
+#------------------------------------------------------------
+
+CREATE TABLE Marque(
+        CodeMarq Varchar (50) NOT NULL ,
+        NomMarq  Varchar (50) NOT NULL
+	,CONSTRAINT Marque_PK PRIMARY KEY (CodeMarq)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Convient
+#------------------------------------------------------------
+
+CREATE TABLE Convient(
+        CodeMod  Varchar (50) NOT NULL ,
+        CodeType Int NOT NULL
+	,CONSTRAINT Convient_PK PRIMARY KEY (CodeMod,CodeType)
+
+	,CONSTRAINT Convient_Modele_FK FOREIGN KEY (CodeMod) REFERENCES Modele(CodeMod)
+	,CONSTRAINT Convient_Type0_FK FOREIGN KEY (CodeType) REFERENCES Type(CodeType)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Construit
+#------------------------------------------------------------
+
+CREATE TABLE Construit(
+        CodeMod  Varchar (50) NOT NULL ,
+        CodeMarq Varchar (50) NOT NULL
+	,CONSTRAINT Construit_PK PRIMARY KEY (CodeMod,CodeMarq)
+
+	,CONSTRAINT Construit_Modele_FK FOREIGN KEY (CodeMod) REFERENCES Modele(CodeMod)
+	,CONSTRAINT Construit_Marque0_FK FOREIGN KEY (CodeMarq) REFERENCES Marque(CodeMarq)
+)ENGINE=InnoDB;
+

@@ -1,0 +1,32 @@
+body {
+    background-color: whitesmoke;
+    text-align: center;
+    margin: 50px;
+}
+
+div {
+    border: 2px solid #303030;
+}
+
+ul li {
+    width: 200px;
+    height: 50px;
+    border: 2px solid #303030;
+    background-color: whitesmoke;
+    list-style: none;
+    color: #303030;
+    font-size: 18px;
+    padding-left: 10px;
+    line-height: 50px;
+}
+
+ul li:hover {
+    cursor: pointer;
+    width: 250px;
+    background-color: #303030;
+    color: whitesmoke;
+    font-weight: bold;
+    border: 3px solid #fefefe;
+    padding-left: 40px;
+    transition: all 1s;
+}

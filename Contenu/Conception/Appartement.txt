@@ -1,0 +1,80 @@
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
+
+
+#------------------------------------------------------------
+# Table: Ville
+#------------------------------------------------------------
+
+CREATE TABLE Ville(
+        CodeVille  Varchar (50) NOT NULL ,
+        CodePostal Varchar (50) NOT NULL ,
+        NomVille   Varchar (50) NOT NULL
+	,CONSTRAINT Ville_PK PRIMARY KEY (CodeVille)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Client
+#------------------------------------------------------------
+
+CREATE TABLE Client(
+        NumClient     Varchar (50) NOT NULL ,
+        NomClient     Varchar (50) NOT NULL ,
+        Titre         Varchar (50) NOT NULL ,
+        AdresseClient Varchar (50) NOT NULL ,
+        CodeVille     Varchar (50) NOT NULL
+	,CONSTRAINT Client_PK PRIMARY KEY (NumClient)
+
+	,CONSTRAINT Client_Ville_FK FOREIGN KEY (CodeVille) REFERENCES Ville(CodeVille)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Immeuble
+#------------------------------------------------------------
+
+CREATE TABLE Immeuble(
+        NumIm     Varchar (50) NOT NULL ,
+        TypeIm    Varchar (50) NOT NULL ,
+        Taxe      Varchar (50) NOT NULL ,
+        CodeVille Varchar (50) NOT NULL
+	,CONSTRAINT Immeuble_PK PRIMARY KEY (NumIm)
+
+	,CONSTRAINT Immeuble_Ville_FK FOREIGN KEY (CodeVille) REFERENCES Ville(CodeVille)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Appartement
+#------------------------------------------------------------
+
+CREATE TABLE Appartement(
+        NumAppart  Varchar (50) NOT NULL ,
+        TypeAppart Varchar (50) NOT NULL ,
+        Etage      Int NOT NULL ,
+        Porte      Int NOT NULL ,
+        Superficie Varchar (50) NOT NULL ,
+        NumIm      Varchar (50) NOT NULL
+	,CONSTRAINT Appartement_PK PRIMARY KEY (NumAppart)
+
+	,CONSTRAINT Appartement_Immeuble_FK FOREIGN KEY (NumIm) REFERENCES Immeuble(NumIm)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Louer
+#------------------------------------------------------------
+
+CREATE TABLE Louer(
+        NumAppart       Varchar (50) NOT NULL ,
+        NumClient       Varchar (50) NOT NULL ,
+        DateSignature   Date NOT NULL ,
+        DateResiliation Date NOT NULL
+	,CONSTRAINT Louer_PK PRIMARY KEY (NumAppart,NumClient)
+
+	,CONSTRAINT Louer_Appartement_FK FOREIGN KEY (NumAppart) REFERENCES Appartement(NumAppart)
+	,CONSTRAINT Louer_Client0_FK FOREIGN KEY (NumClient) REFERENCES Client(NumClient)
+)ENGINE=InnoDB;
+

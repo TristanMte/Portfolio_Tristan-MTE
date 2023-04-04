@@ -1,0 +1,44 @@
+body {
+    background-color: whitesmoke;
+}
+
+h1 {
+    color: #303030;
+    text-align: center;
+}
+
+h2 {
+    color: #31525B;
+    text-shadow: #FFA101 1px 1px, #FFA101 -1px 1px, #FFA101 -1px -1px, #FFA101 1px -1px;
+}
+
+h3 {
+    color: whitesmoke;
+}
+
+.ecrit1 {
+    color: #31525B;
+    text-shadow: whitesmoke 1px 1px, whitesmoke -1px 1px, whitesmoke -1px -1px, whitesmoke 1px -1px;
+}
+
+.ecrit2 {
+    color: #31525B;
+    text-shadow: whitesmoke 1px 1px, whitesmoke -1px 1px, whitesmoke -1px -1px, whitesmoke 1px -1px;
+}
+
+.cadre1 {
+    background-color: #303030;
+    border: 4px solid #31525B;
+    text-align: center;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cadre2 {
+    background-color: #FFA101;
+    border: 4px solid whitesmoke;
+    text-align: center;
+    width: 75%;
+    margin-left: 12%;
+}

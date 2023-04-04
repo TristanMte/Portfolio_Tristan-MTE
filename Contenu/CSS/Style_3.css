@@ -1,0 +1,31 @@
+body {
+	background-color: whitesmoke;
+	text-align: center;
+	margin: 100px;
+}
+
+div {
+	height: 250px;
+	width: 200px;
+	border: 3px solid #303030;
+	float: left;
+	margin-right: 20px;
+	margin-top: 5px;
+}
+
+.c1 {
+	background-color: blue;
+}
+
+.c2 {
+	background-color: white;
+}
+
+.c3 {
+	background-color: red;
+}
+
+.c4 {
+	background-color: #B0E0E6;
+	clear: both;
+}

@@ -1,0 +1,80 @@
+body {
+    background-color: whitesmoke;
+    text-align: center;
+    margin: 100px;
+}
+
+div {
+    border: 2px solid #303030;
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #303030;
+}
+
+h2 {
+    color: #303030;
+}
+
+h3 {
+    text-align: center;
+    color: #303030;
+}
+
+.c0 {
+    background-color: whitesmoke;
+    width: 75%;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
+
+.c1 {
+    background-color: rgb(53, 53, 255);
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 275px;
+    width: 350px;
+    font-weight: bold;
+}
+
+.c2 {
+    background-color: rgb(220, 220, 220);
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 275px;
+    width: 350px;
+    font-weight: bold;
+}
+
+.c3 {
+    background-color: rgb(255, 60, 60);
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 275px;
+    width: 350px;
+    font-weight: bold;
+}
+
+.c4 {
+    background-color: whitesmoke;
+    width: 75%;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+.c5 {
+    background-color: whitesmoke;
+    width: 100%;
+    border: 1px solid #303030;
+}
+
+.bloc {
+    border: 1px;
+    padding-left: 200px;
+}

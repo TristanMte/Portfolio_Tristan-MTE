@@ -1,0 +1,96 @@
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
+
+
+#------------------------------------------------------------
+# Table: Rayons
+#------------------------------------------------------------
+
+CREATE TABLE Rayons(
+        CodeRayon     Varchar (50) NOT NULL ,
+        IntituleRayon Varchar (50) NOT NULL
+	,CONSTRAINT Rayons_PK PRIMARY KEY (CodeRayon)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Auteur
+#------------------------------------------------------------
+
+CREATE TABLE Auteur(
+        CodeAut   Varchar (50) NOT NULL ,
+        NomAut    Varchar (50) NOT NULL ,
+        PrenomAut Varchar (50) NOT NULL
+	,CONSTRAINT Auteur_PK PRIMARY KEY (CodeAut)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Mots
+#------------------------------------------------------------
+
+CREATE TABLE Mots(
+        CodeMot Varchar (50) NOT NULL ,
+        Mot     Varchar (50) NOT NULL
+	,CONSTRAINT Mots_PK PRIMARY KEY (CodeMot)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Adherent
+#------------------------------------------------------------
+
+CREATE TABLE Adherent(
+        CodeAdh    Varchar (50) NOT NULL ,
+        NomAdh     Varchar (50) NOT NULL ,
+        PrenomAdh  Varchar (50) NOT NULL ,
+        AdresseAdh Varchar (50) NOT NULL
+	,CONSTRAINT Adherent_PK PRIMARY KEY (CodeAdh)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Ouvrage
+#------------------------------------------------------------
+
+CREATE TABLE Ouvrage(
+        CodeOuvrage  Varchar (50) NOT NULL ,
+        TitreOuvrage Varchar (50) NOT NULL ,
+        DateEmprunt  Date NOT NULL ,
+        CodeRayon    Varchar (50) NOT NULL ,
+        CodeAdh      Varchar (50) NOT NULL
+	,CONSTRAINT Ouvrage_PK PRIMARY KEY (CodeOuvrage)
+
+	,CONSTRAINT Ouvrage_Rayons_FK FOREIGN KEY (CodeRayon) REFERENCES Rayons(CodeRayon)
+	,CONSTRAINT Ouvrage_Adherent0_FK FOREIGN KEY (CodeAdh) REFERENCES Adherent(CodeAdh)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Auteurde
+#------------------------------------------------------------
+
+CREATE TABLE Auteurde(
+        CodeOuvrage Varchar (50) NOT NULL ,
+        CodeAut     Varchar (50) NOT NULL
+	,CONSTRAINT Auteurde_PK PRIMARY KEY (CodeOuvrage,CodeAut)
+
+	,CONSTRAINT Auteurde_Ouvrage_FK FOREIGN KEY (CodeOuvrage) REFERENCES Ouvrage(CodeOuvrage)
+	,CONSTRAINT Auteurde_Auteur0_FK FOREIGN KEY (CodeAut) REFERENCES Auteur(CodeAut)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Indexe
+#------------------------------------------------------------
+
+CREATE TABLE Indexe(
+        CodeOuvrage Varchar (50) NOT NULL ,
+        CodeMot     Varchar (50) NOT NULL
+	,CONSTRAINT Indexe_PK PRIMARY KEY (CodeOuvrage,CodeMot)
+
+	,CONSTRAINT Indexe_Ouvrage_FK FOREIGN KEY (CodeOuvrage) REFERENCES Ouvrage(CodeOuvrage)
+	,CONSTRAINT Indexe_Mots0_FK FOREIGN KEY (CodeMot) REFERENCES Mots(CodeMot)
+)ENGINE=InnoDB;
+

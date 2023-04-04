@@ -1,0 +1,52 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: whitesmoke;
+    color: #303030;
+    margin: 0px;
+}
+
+.header {
+    height: 10px;
+    background: #303030;
+}
+
+.identite {
+    background-color: #ffa101;
+    padding-bottom: 5px;
+}
+
+img {
+    float: left;
+    width: 100px;
+    margin: 20px;
+}
+
+.fact {
+    border: 2px;
+    width: 75%;
+}
+
+.who {
+    width: 75%
+}
+
+.a {
+    font-size: 20px;
+}
+
+.b {
+    text-decoration: underline;
+}
+
+.p1 {
+    margin-left: 80%;
+}
+
+.p2 {
+    margin-left: 10px;
+}
+
+.t1 {
+    background-color: #ffa101;
+}
