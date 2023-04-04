@@ -106,10 +106,8 @@ img {
 
 .projet {
     width: auto;
-    height: 200px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 50px;
+    height: auto;
+
 }
 
 svg:not(:root) {
