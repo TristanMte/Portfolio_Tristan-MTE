@@ -104,11 +104,18 @@ html {
     background: #DADADB;
 }
 
-.contact-section {
+.slam-section {
     height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #fefefe;
+}
+
+.contact-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #DADADB;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
