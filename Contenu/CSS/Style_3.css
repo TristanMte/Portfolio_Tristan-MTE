@@ -1,13 +1,13 @@
 body {
-	background-color: whitesmoke;
+	background-color: #fefefe;
 	text-align: center;
 	margin: 100px;
 }
 
 .c1 {
 	background-color: blue;
-		height: 250px;
-	width: 200px;
+	height: autox;
+	width: 15%;
 	border: 3px solid #303030;
 	float: left;
 	margin-right: 20px;
@@ -16,8 +16,8 @@ body {
 
 .c2 {
 	background-color: white;
-		height: 250px;
-	width: 200px;
+	height: autox;
+	width: 15%;
 	border: 3px solid #303030;
 	float: left;
 	margin-right: 20px;
@@ -26,8 +26,8 @@ body {
 
 .c3 {
 	background-color: red;
-		height: 250px;
-	width: 200px;
+	height: autox;
+	width: 15%;
 	border: 3px solid #303030;
 	float: left;
 	margin-right: 20px;
@@ -37,8 +37,8 @@ body {
 .c4 {
 	background-color: #B0E0E6;
 	clear: both;
-		height: 250px;
-	width: 200px;
+	height: autox;
+	width: 15%;
 	border: 3px solid #303030;
 	float: left;
 	margin-right: 20px;
