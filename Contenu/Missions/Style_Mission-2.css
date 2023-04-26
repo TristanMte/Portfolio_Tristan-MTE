@@ -50,3 +50,7 @@ img {
 .t1 {
     background-color: #ffa101;
 }
+
+#impression{
+  display : none;
+}
