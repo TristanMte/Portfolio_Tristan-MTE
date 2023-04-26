@@ -5,26 +5,28 @@ body {
 }
 
 .divmenu {
+    margin: auto;
     border: 2px solid #303030;
+    width:50%; 
 }
 
 ul .menucss {
-    width: 200px;
-    height: 50px;
+    margin-top: 1%;
+    width: 25%;
+    height: auto;
     border: 2px solid #303030;
-    background-color: whitesmoke;
+    background-color: #fefefe;
     list-style: none;
     color: #303030;
-    font-size: 18px;
-    padding-left: 10px;
-    line-height: 50px;
+    font-size: medium;
+    line-height: 400%;
 }
 
 ul .menucss:hover {
     cursor: pointer;
     width: 250px;
     background-color: #303030;
-    color: whitesmoke;
+    color: #fefefe;
     font-weight: bold;
     border: 3px solid #fefefe;
     padding-left: 40px;
