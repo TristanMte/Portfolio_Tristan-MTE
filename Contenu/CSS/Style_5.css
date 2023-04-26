@@ -1,14 +1,14 @@
 body {
-    background-color: whitesmoke;
+    background-color: #fefefe;
     text-align: center;
-    margin: 50px;
+    margin: auto;
 }
 
-div {
+.divmenu {
     border: 2px solid #303030;
 }
 
-ul li {
+ul .menucss {
     width: 200px;
     height: 50px;
     border: 2px solid #303030;
@@ -20,7 +20,7 @@ ul li {
     line-height: 50px;
 }
 
-ul li:hover {
+ul .menucss:hover {
     cursor: pointer;
     width: 250px;
     background-color: #303030;
