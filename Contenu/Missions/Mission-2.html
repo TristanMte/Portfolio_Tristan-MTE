@@ -110,63 +110,63 @@
             </tr>
             <tr>
                 <td><input type="text"></td>
-                <td><input type="number"></td>
-                <td><input type="text" name="t1" id="t1"></td>
-                <td><input type="text"></td>
+<input type="number" name="quantity" id="quantity" onchange="calculerSousTotal()">
+<input type="number" name="unit_price" id="unit_price" onchange="calculerSousTotal()">
+<input type="number" name="total" id="total" readonly>
             </tr>
             <tr>
                 <td><input type="text"></td>
-                <td><input type="number"></td>
-                <td><input type="text" name="t2" id="t2"></td>
-                <td><input type="text"></td>
+<input type="number" name="quantity" id="quantity" onchange="calculerSousTotal()">
+<input type="number" name="unit_price" id="unit_price" onchange="calculerSousTotal()">
+<input type="number" name="total" id="total" readonly>
             </tr>
             <tr>
                 <td><input type="text"></td>
-                <td><input type="number"></td>
-                <td><input type="text" name="t3" id="t3"></td>
-                <td><input type="text"></td>
+<input type="number" name="quantity" id="quantity" onchange="calculerSousTotal()">
+<input type="number" name="unit_price" id="unit_price" onchange="calculerSousTotal()">
+<input type="number" name="total" id="total" readonly>
             </tr>
             <tr>
                 <td><input type="text"></td>
-                <td><input type="number"></td>
-                <td><input type="text" name="t4" id="t4"></td>
-                <td><input type="text"></td>
+<input type="number" name="quantity" id="quantity" onchange="calculerSousTotal()">
+<input type="number" name="unit_price" id="unit_price" onchange="calculerSousTotal()">
+<input type="number" name="total" id="total" readonly>
             </tr>
             <tr>
                 <td><input type="text"></td>
-                <td><input type="number"></td>
-                <td><input type="text" name="t5" id="t5"></td>
-                <td><input type="text"></td>
+<input type="number" name="quantity" id="quantity" onchange="calculerSousTotal()">
+<input type="number" name="unit_price" id="unit_price" onchange="calculerSousTotal()">
+<input type="number" name="total" id="total" readonly>
             </tr>
             <tr>
                 <td><input type="text"></td>
-                <td><input type="number"></td>
-                <td><input type="text" name="t6" id="t6"></td>
-                <td><input type="text"></td>
+<input type="number" name="quantity" id="quantity" onchange="calculerSousTotal()">
+<input type="number" name="unit_price" id="unit_price" onchange="calculerSousTotal()">
+<input type="number" name="total" id="total" readonly>
             </tr>
             <tr>
                 <td><input type="text"></td>
-                <td><input type="number"></td>
-                <td><input type="text" name="t7" id="t7"></td>
-                <td><input type="text"></td>
+<input type="number" name="quantity" id="quantity" onchange="calculerSousTotal()">
+<input type="number" name="unit_price" id="unit_price" onchange="calculerSousTotal()">
+<input type="number" name="total" id="total" readonly>
             </tr>
             <tr>
                 <td><input type="text"></td>
-                <td><input type="number"></td>
-                <td><input type="text" name="t8" id="t8"></td>
-                <td><input type="text"></td>
+<input type="number" name="quantity" id="quantity" onchange="calculerSousTotal()">
+<input type="number" name="unit_price" id="unit_price" onchange="calculerSousTotal()">
+<input type="number" name="total" id="total" readonly>
             </tr>
             <tr>
                 <td><input type="text"></td>
-                <td><input type="number"></td>
-                <td><input type="text" name="t9" id="t9"></td>
-                <td><input type="text"></td>
+<input type="number" name="quantity" id="quantity" onchange="calculerSousTotal()">
+<input type="number" name="unit_price" id="unit_price" onchange="calculerSousTotal()">
+<input type="number" name="total" id="total" readonly>
             </tr>
             <tr>
                 <td><input type="text"></td>
-                <td><input type="number"></td>
-                <td><input type="text" name="t10" id="t10"></td>
-                <td><input type="text"></td>
+<input type="number" name="quantity" id="quantity" onchange="calculerSousTotal()">
+<input type="number" name="unit_price" id="unit_price" onchange="calculerSousTotal()">
+<input type="number" name="total" id="total" readonly>
             </tr>
         </table>
     </div>
@@ -177,7 +177,7 @@
             <tr>
                 <td width="75%" rowspan="7"><textarea cols="50" rows="10"></textarea></td>
                 <td>Sous-Total :</td>
-                <td><input type="text" name="t3" id="t3"></td>
+                <td><span id="sous-total"></span></td>
             </tr>
             <tr>
                 <td>Remise :</td>
@@ -214,7 +214,9 @@
     <br>
     <br>
     <br>
-
+<form>
+  <input id="impression" name="impression" type="button" onclick="imprimer_page()" value="Imprimer cette page" />
+</form>
     <div class="header"></div>
 </body>
 
