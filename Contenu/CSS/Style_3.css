@@ -2,11 +2,13 @@ body {
 	background-color: #fefefe;
 	text-align: center;
 	margin: 100px;
+	color: black;
 }
 
 .c1 {
 	background-color: blue;
-	height: autox;
+	font
+	height: auto;
 	width: 15%;
 	border: 3px solid #303030;
 	float: left;
@@ -17,7 +19,7 @@ body {
 
 .c2 {
 	background-color: white;
-	height: autox;
+	height: auto;
 	width: 15%;
 	border: 3px solid #303030;
 	float: left;
@@ -28,7 +30,7 @@ body {
 
 .c3 {
 	background-color: red;
-	height: autox;
+	height: auto;
 	width: 15%;
 	border: 3px solid #303030;
 	float: left;
@@ -40,7 +42,7 @@ body {
 .c4 {
 	background-color: #B0E0E6;
 	clear: both;
-	height: autox;
+	height: auto;
 	width: 15%;
 	border: 3px solid #303030;
 	float: left;
