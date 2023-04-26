@@ -1,16 +1,8 @@
 body {
-    background-color: whitesmoke;
+    background-color: #fefefe;
     text-align: center;
-    margin: 100px;
 }
 
-div {
-    border: 2px solid #303030;
-    float: left;
-    margin-right: 10px;
-    margin-top: 5px;
-    border-radius: 10px;
-}
 
 h1 {
     color: #303030;
@@ -26,55 +18,84 @@ h3 {
 }
 
 .c0 {
-    background-color: whitesmoke;
+    border: 2px solid #303030;
+    background-color: #fefefe;
     width: 75%;
     text-align: center;
-    margin-bottom: 20px;
-    margin-left: 100px;
+    margin-bottom: auto;
+    margin-left: 5%;
+        margin-right: 2%;
+    margin-top: 1%;
+    border-radius: 10px;
+    
 }
 
 .c1 {
+    border: 2px solid #303030;
     background-color: rgb(53, 53, 255);
-    padding-left: 5px;
-    padding-right: 5px;
-    height: 275px;
-    width: 350px;
+    padding: auto;
+    height: auto;
+    width: 15%;
     font-weight: bold;
+    float: left;
+        margin-right: 2%;
+    margin-top: 1%;
+    border-radius: 10px;
+    
 }
 
 .c2 {
+    border: 2px solid #303030;
     background-color: rgb(220, 220, 220);
-    padding-left: 5px;
-    padding-right: 5px;
-    height: 275px;
-    width: 350px;
+   padding: auto;
+    height: auto;
+    width: 15%;
     font-weight: bold;
+    float: left;
+        margin-right: 2%;
+    margin-top: 1%;
+    border-radius: 10px;
 }
 
 .c3 {
+    border: 2px solid #303030;
     background-color: rgb(255, 60, 60);
-    padding-left: 5px;
-    padding-right: 5px;
-    height: 275px;
-    width: 350px;
+   padding: auto;
+    height: auto;
+    width: 15%;
     font-weight: bold;
+    float: left;
+        margin-right: 2%;
+    margin-top: 1%;
+    border-radius: 10px;
 }
 
 .c4 {
-    background-color: whitesmoke;
+    border: 2px solid #303030;
+    background-color: #fefefe;
     width: 75%;
     text-align: center;
-    margin-top: 20px;
-    margin-left: 100px;
+float: left;
+    margin-bottom: auto;
+    margin-left: 5%;
+        margin-right: 2%;
+    margin-top: 1%;
+    border-radius: 10px;
 }
 
 .c5 {
-    background-color: whitesmoke;
+    border: 2px solid #303030;
+    background-color: #fefefe;
     width: 100%;
-    border: 1px solid #303030;
+    margin: auto; 
+    border-radius: 10px;
 }
 
 .bloc {
     border: 1px;
-    padding-left: 200px;
+    padding-left: auto;
+    margin-left: 25%;
+        
+    margin-top: 1%;
+    border-radius: 10px;
 }
