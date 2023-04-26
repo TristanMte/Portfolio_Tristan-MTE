@@ -1,40 +1,31 @@
-function bonus(){
-    var total = 0
-    var stotal = 0
-    var stotalr = 0
-    var impot = 0
-    var taxe = 0
-    var exp = 0
-    var totalf = 0
-
-    do{
-        var price = prompt("Prix")
-        var quantity = prompt("Quantité")
-
-        alert(`Vos ${article} couterons ${price * quantity} €`)
-        total = Number(price)*Number(quantity) 
-        totalf += total 
-        c += ("Article : " +article+" <br> Prix : "+price +"€"+ " <br> Quantité : "+quantity+ " <br> Total : "+total+"€"+"<br><br><br>")
-        alert('Vos articles additionnes couterons ' + totalf + "€")
-
-        next = prompt("Voulez vous continuer (OUI/STOP) ?")
-    }
-    while(next != "STOP");
-    document.write(c);
-    document.write(" Total final: "+totalf+"€");
+function calculerSousTotal() {
+  // Récupération de toutes les lignes de la table
+  const lignes = document.querySelectorAll('.fact tr:not(:first-child)');
+  
+  // Initialisation du sous-total
+  let sousTotal = 0;
+  
+  // Boucle sur toutes les lignes de la table
+  lignes.forEach((ligne) => {
+    // Récupération des champs de quantité, prix unitaire et total
+    const quantite = ligne.querySelector('[name="quantity"]').valueAsNumber;
+    const prixUnitaire = ligne.querySelector('[name="unit_price"]').valueAsNumber;
+    const total = ligne.querySelector('[name="total"]');
+    
+    // Calcul du total pour cette ligne
+    const totalLigne = quantite * prixUnitaire;
+    
+    // Mise à jour du champ total de la ligne
+    total.value = totalLigne;
+    
+    // Ajout du total de cette ligne au sous-total
+    sousTotal += totalLigne;
+  });
+  
+  // Mise à jour du champ sous-total
+  document.querySelector('#sous-total').textContent = sousTotal;
 }
 
-function somme(){
-    var d= document.getElementById("t1").value;
-    var e= document.getElementById("t2").value;
-    var f= document.getElementById("t3").value;
-    var g= document.getElementById("t4").value;
-    var h= document.getElementById("t5").value;
-    var i= document.getElementById("t6").value;
-    var j= document.getElementById("t7").value;
-    var k= document.getElementById("t8").value;
-    var l= document.getElementById("t9").value;
-    var m= document.getElementById("t10").value;
-    var s= Number(d)+ Number(e)+ Number(f)+ Number(g)+ Number(h)+ Number(i)+ Number(j)+ Number(k)+ Number(l)+ Number(m);
-    t3.value=s;
+function imprimer_page(){
+  window.print();
 }
