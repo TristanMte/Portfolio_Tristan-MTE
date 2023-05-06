@@ -1,7 +1,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-color: whitesmoke;
+    background-color: #fefefe;
     color: #303030
 }
 
@@ -12,7 +12,7 @@ span {
 .container {
     margin: 0 auto;
     border: 2px solid #303030;
-    background-color: whitesmoke;
+    background-color: #fefefe;
     width: 800px;
     height: auto;
     border-radius: 5px;
